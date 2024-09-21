@@ -1,10 +1,14 @@
-class Person:
+class University:
+    def __init__(self, uniname):
+        self.cUniNmae = uniname
 
-    def __init__(self, name):
-        self.name = name
+class Student(University):
+    def __init__(self, studentName):
+        super().__init__('Air Universtiy Islamabad')
+        self.cStudentName = studentName
 
+firstStudent = Student('Rufaeel');
 
-new_person =  Person("Rufaeel");
+print(f"Student {firstStudent.cStudentName}")
+print(f"Universtiy {firstStudent.cUniNmae}")
 
-
-print(new_person.name)
